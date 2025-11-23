@@ -5,21 +5,33 @@ import "./App.css";
 
 // Pastikan path ini sesuai dengan lokasi kamu menyimpan file Nav.jsx
 import Nav from "./components/Nav.jsx";
-import Hero from "./components/Hero.jsx";
-import Features from "./components/Features.jsx";
+import Home from "./components/Home.jsx";
+import Predict from "./components/Predict.jsx";
+
 // import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <Router>
       <div className="app">
+        {/* Nav diletakkan di sini agar SELALU MUNCUL dan tidak ikut ke-reload */}
         <Nav />
-        <Hero />
-        <Features />
+
+        {/* Bagian ini yang akan berubah-ubah isinya sesuai link */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/predict" element={<Predict />} />
+        </Routes>
       </div>
-    </>
+    </Router>
+    // <>
+    //   <div className="app">
+    //     <Nav />
+    //     <Hero />
+    //     <Features />
+    //   </div>
+    // </>
   );
 }
 
