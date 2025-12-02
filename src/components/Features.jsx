@@ -1,5 +1,6 @@
 import React from "react";
 // import "./css/Features.css";
+import KeyFeatures from "../assets/images/key-features.svg";
 
 function Features() {
   return (
@@ -7,7 +8,8 @@ function Features() {
       <h2 className="features-title">Key Features</h2>
       <div className="features-grid">
         {/* Feature Card 1 - Form Preview */}
-        <div className="feature-card">
+        <img src={KeyFeatures} className="feature-img" alt="Key Features" />
+        {/* <div className="feature-card">
           <div className="form-preview">
             <div className="form-field">📊 Usia bayi</div>
             <div className="form-field">📏 Body</div>
@@ -25,8 +27,7 @@ function Features() {
             <div className="result-detail">Status: OK</div>
             <div className="result-detail">Prediction: Fit</div>
           </div>
-        </div>
-
+        </div> */}
         {/* Feature Card 2 - Akurat */}
         <div className="feature-card">
           <div className="feature-icon icon-green">✓</div>
@@ -36,7 +37,6 @@ function Features() {
             akurat.
           </p>
         </div>
-
         {/* Feature Card 3 - Mudah Digunakan */}
         <div className="feature-card">
           <div className="feature-icon icon-orange">👆</div>

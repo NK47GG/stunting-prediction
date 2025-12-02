@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+  padding: 20px 40px 20px 10px;
   background: transparent;
   position: sticky; /* Kunci agar nempel */
   top: 0;
@@ -284,5 +284,62 @@ body {
 
   .hero-content {
     flex-direction: column;
+  }
+}
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+  .features {
+    padding: 60px 30px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .feature-card {
+    padding: 30px 20px;
+  }
+
+  .feature-card h3 {
+    font-size: 20px;
+  }
+
+  .feature-card p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .features {
+    padding: 50px 20px;
+  }
+
+  .features-title {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .feature-card {
+    padding: 25px 20px;
+    width: 350px;
+  }
+
+  .feature-img {
+    padding: 25px 20px;
+    width: 350px;
+  }
+
+  .feature-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 28px;
   }
 }

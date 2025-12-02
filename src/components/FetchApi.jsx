@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../App.css";
+import Bayi from "../assets/images/bayi.svg";
 
 function StuntingForm() {
   // --- State untuk 4 input ---
@@ -85,17 +86,32 @@ function StuntingForm() {
             Isikan detail si kecil dibawah ini untuk memprediksi stunting!
           </p>
         </div>
-
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src={Bayi}
+            alt="bayi"
+            style={{
+              width: "300px",
+              height: "auto",
+            }}
+          />
+        </div>
         <div
           style={{
             display: "flex",
             gap: "30px",
-            alignItems: "flex-start",
+            justifyContent: "center",
             flexWrap: "wrap",
           }}
         >
           {/* Illustration */}
-          <div
+          {/* <div
             style={{
               flexShrink: 0,
               width: "200px",
@@ -144,7 +160,7 @@ function StuntingForm() {
             >
               👶
             </div>
-          </div>
+          </div> */}
 
           {/* Form Container */}
           <div
@@ -158,8 +174,50 @@ function StuntingForm() {
             }}
           >
             <form onSubmit={handleSubmit}>
+              {/* Nama */}
+              <label
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  fontSize: "14px",
+                  fontWeight: "600",
+                  color: "#333",
+                  marginBottom: "8px",
+                }}
+              >
+                <span
+                  style={{
+                    width: "28px",
+                    height: "28px",
+                    background: "#5dade2",
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "14px",
+                  }}
+                >
+                  🎍
+                </span>
+                Nama
+              </label>
+              <input
+                type="text"
+                placeholder="Contoh : John Doe"
+                style={{
+                  width: "100%",
+                  padding: "14px 18px",
+                  border: "2px solid #e0e0e0",
+                  borderRadius: "12px",
+                  fontSize: "14px",
+                  background: "#f8f9fa",
+                  fontFamily: "inherit",
+                }}
+              />
+
               {/* Jenis Kelamin */}
-              <div style={{ marginBottom: "25px" }}>
+              <div style={{ marginBottom: "25px", marginTop: "25px" }}>
                 <label
                   style={{
                     display: "flex",

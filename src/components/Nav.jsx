@@ -1,20 +1,34 @@
 import React from "react";
-// import "../assets/css/Navbar.css";
 import { Link } from "react-router-dom";
+import LogoSimbol from "../assets/images/logo-simbol.svg";
+import LogoText from "../assets/images//logo-text.svg";
 
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">
-        <div className="logo-icon">S</div>
-        <div className="logo-text">STUNTIFY</div>
-      </div>
+      <Link
+        to="/"
+        className="logo"
+        style={{
+          textDecoration: "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-start",
+        }}
+      >
+        <img src={LogoSimbol} alt="Logo" style={{ width: "150px" }} />
+      </Link>
+
       <ul className="nav-links">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <b>Home</b>
+          </Link>
         </li>
         <li>
-          <Link to="/predict">Predict</Link>
+          <Link to="/predict">
+            <b>Predict</b>
+          </Link>
         </li>
       </ul>
     </nav>
