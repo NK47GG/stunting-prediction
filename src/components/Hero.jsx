@@ -2,6 +2,7 @@ import React from "react";
 // import "./css/Hero.css";
 import Phone from "../assets/images/phone.svg";
 import IbuAnak from "../assets/images/ibu-anak.svg";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -22,9 +23,11 @@ function Hero() {
             Website ini menunjukung prediksi dini potensi stunting sesuai
             standar WHO (World Health Organization)
           </p>
-          <button className="cta-button">TRY TO PREDICT</button>
+          <Link to="/predict">
+            <button className="cta-button">TRY TO PREDICT</button>
+          </Link>
         </div>
-        <img src={Phone} alt="Logo" />;
+        <img src={Phone} alt="Logo" />
       </div>
 
       {/* <PhoneMockup /> */}
